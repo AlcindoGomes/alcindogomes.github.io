@@ -7,138 +7,190 @@
 
 <style>
 :root{
-    --bg:#0b1120;
-    --card:#020617;
-    --text:#e5e7eb;
-    --accent:#38bdf8;
+--bg:#0b1120;
+--card:#020617;
+--text:#e5e7eb;
+--accent:#38bdf8;
+--border:rgba(56,189,248,0.25);
 }
 
 /* modo claro automático */
 @media (prefers-color-scheme: light){
 :root{
-    --bg:#f1f5f9;
-    --card:#ffffff;
-    --text:#020617;
-    --accent:#0284c7;
+--bg:#f1f5f9;
+--card:#ffffff;
+--text:#020617;
+--accent:#0284c7;
+--border:rgba(2,132,199,0.2);
 }
 }
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
-    overflow-x:hidden;
+font-family:Arial, Helvetica, sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+overflow-x:hidden;
 }
 
 /* fundo animado cyber */
 body::before{
-    content:"";
-    position:fixed;
-    width:200%;
-    height:200%;
-    background:radial-gradient(circle at 20% 20%, #0ea5e9 0%, transparent 40%),
-               radial-gradient(circle at 80% 80%, #22d3ee 0%, transparent 40%);
-    animation:moveBg 20s linear infinite;
-    z-index:-1;
-    opacity:0.15;
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:
+radial-gradient(circle at 20% 20%, #0ea5e9 0%, transparent 40%),
+radial-gradient(circle at 80% 80%, #22d3ee 0%, transparent 40%);
+animation:moveBg 20s linear infinite;
+z-index:-1;
+opacity:0.15;
 }
 
 @keyframes moveBg{
-    0%{transform:translate(0,0);}
-    50%{transform:translate(-25%,-25%);}
-    100%{transform:translate(0,0);}
+0%{transform:translate(0,0);}
+50%{transform:translate(-25%,-25%);}
+100%{transform:translate(0,0);}
 }
 
+/* NAVBAR */
+nav{
+position:sticky;
+top:0;
+background:rgba(2,6,23,0.85);
+backdrop-filter:blur(10px);
+padding:18px;
+text-align:center;
+border-bottom:1px solid var(--border);
+font-weight:bold;
+}
+
+/* HEADER */
 header{
-    text-align:center;
-    padding:60px 20px;
+text-align:center;
+padding:70px 20px;
 }
 
 header h1{
-    margin:0;
-    font-size:2.5em;
-    color:var(--accent);
-    text-shadow:0 0 10px var(--accent);
+font-size:2.7em;
+color:var(--accent);
+text-shadow:0 0 15px var(--accent);
 }
 
+header p{
+margin-top:10px;
+font-size:1.2em;
+opacity:0.9;
+}
+
+/* SECTIONS */
 section{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
+max-width:1000px;
+margin:auto;
+padding:50px 20px;
 }
 
 h2{
-    border-left:4px solid var(--accent);
-    padding-left:10px;
-    color:var(--accent);
+border-left:4px solid var(--accent);
+padding-left:12px;
+margin-bottom:20px;
+color:var(--accent);
 }
 
+/* GRID */
 .grid{
-    display:grid;
-    gap:20px;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+display:grid;
+gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 }
 
+/* CARD */
 .card{
-    background:var(--card);
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 0 15px rgba(56,189,248,0.15);
-    transition:0.3s;
+background:var(--card);
+padding:25px;
+border-radius:14px;
+border:1px solid var(--border);
+transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px) scale(1.02);
-    box-shadow:0 0 25px rgba(56,189,248,0.35);
+transform:translateY(-6px);
+box-shadow:0 0 25px rgba(56,189,248,0.35);
 }
 
+/* DESTAQUE */
+.highlight{
+font-size:1.1em;
+font-weight:bold;
+color:var(--accent);
+margin-bottom:15px;
+}
+
+/* LINKS */
+a{
+color:var(--accent);
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+/* FOOTER */
 footer{
-    text-align:center;
-    padding:30px;
-    opacity:0.7;
+text-align:center;
+padding:40px;
+opacity:0.7;
 }
 
 /* botão WhatsApp */
 .whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-    text-decoration:none;
-    box-shadow:0 0 15px rgba(0,0,0,0.4);
-    transition:0.3s;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+transition:0.3s;
 }
 
 .whatsapp:hover{
-    transform:scale(1.1);
+transform:scale(1.15);
 }
 </style>
 </head>
 
 <body>
 
+<nav>Cybersecurity Portfolio</nav>
+
 <header>
 <h1>Alcindo Gomes Neto</h1>
-<p>Cybersecurity | SOC Analyst | Blue Team | Threat Detection</p>
+<p>Cybersecurity • SOC Analyst • Blue Team • Threat Detection</p>
 </header>
 
 <section>
 <h2>Sobre Mim</h2>
 <div class="card">
-Profissional em formação em Segurança Cibernética com foco em atuação em SOC, 
-análise de logs, detecção de incidentes e proteção de ambientes corporativos. 
-Experiência prática em laboratórios de SIEM, troubleshooting de infraestrutura 
-e automação com Python voltada à segurança.
+<div class="highlight">Profissional focado em Segurança Cibernética e operações SOC.</div>
+
+Atuo com análise de logs, detecção de ameaças e proteção de ambientes corporativos.
+Possuo experiência prática em laboratórios de SIEM, troubleshooting de infraestrutura
+e automação com Python aplicada à segurança da informação.
 </div>
 </section>
 
@@ -148,20 +200,20 @@ e automação com Python voltada à segurança.
 
 <div class="card">
 <h3>🔎 Laboratório de SIEM</h3>
-Implantação de ambiente com Wazuh, Splunk e Security Onion para 
-detecção de eventos de autenticação, correlação de logs e análise inicial de incidentes.
+Implementação de ambiente com Wazuh, Splunk e Security Onion para monitoramento,
+correlação de eventos e análise inicial de incidentes de segurança.
 </div>
 
 <div class="card">
 <h3>🐍 Automação de Segurança com Python</h3>
-Scripts para consultas SQL automatizadas, análise de logs, organização de dados 
-e otimização de rotinas operacionais de segurança.
+Scripts para consultas SQL automatizadas, análise de logs e otimização
+de processos operacionais em segurança.
 </div>
 
 <div class="card">
 <h3>💽 Troubleshooting SSD M.2</h3>
-Diagnóstico de falha de reconhecimento de armazenamento, identificação de causa raiz 
-em hardware e restauração completa do sistema após substituição do dispositivo.
+Diagnóstico completo de falha de reconhecimento de armazenamento,
+identificação da causa raiz em hardware e restauração do sistema.
 </div>
 
 </div>
@@ -173,12 +225,12 @@ em hardware e restauração completa do sistema após substituição do disposit
 
 <div class="card">
 <h3>🛡️ Segurança</h3>
-NIST CSF • ISO 27001 • IAM • Análise de Riscos • Políticas de Segurança
+NIST CSF • ISO 27001 • IAM • Gestão de Riscos • Políticas de Segurança
 </div>
 
 <div class="card">
 <h3>📡 SOC / Blue Team</h3>
-SIEM • Logs • Detecção de Incidentes • Resposta Inicial
+SIEM • Monitoramento • Logs • Detecção de Incidentes • Resposta Inicial
 </div>
 
 <div class="card">
@@ -192,17 +244,21 @@ Python • SQL • Linux • Redes • Troubleshooting
 <section>
 <h2>Contato</h2>
 <div class="card">
-📍 São Paulo – SP<br>
-📧 alcindogomes250@gmail.com<br>
-🔗 linkedin.com/in/alcindogomesneto
+📍 São Paulo – SP<br><br>
+
+📧 <a href="mailto:alcindogomes250@gmail.com">alcindogomes250@gmail.com</a><br><br>
+
+🔗 <a href="https://linkedin.com/in/alcindogomesneto" target="_blank">
+linkedin.com/in/alcindogomesneto
+</a>
 </div>
 </section>
 
 <footer>
-© 2025 – Alcindo Gomes Neto | Cybersecurity Portfolio
+© 2025 — Alcindo Gomes Neto | Cybersecurity Portfolio
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5511999999999" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/5511976311017" target="_blank">💬</a>
 
 </body>
 </html>
