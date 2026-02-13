@@ -1,280 +1,208 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Alcindo Gomes Neto | Cybersecurity Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alcindo Gomes Neto | Cybersecurity Portfolio</title>
 
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            background-color: #0f172a;
-            color: #e5e7eb;
-            line-height: 1.6;
-        }
+<style>
+:root{
+    --bg:#0b1120;
+    --card:#020617;
+    --text:#e5e7eb;
+    --accent:#38bdf8;
+}
 
-        header {
-            background: #020617;
-            padding: 40px 20px;
-            text-align: center;
-        }
+/* modo claro automático */
+@media (prefers-color-scheme: light){
+:root{
+    --bg:#f1f5f9;
+    --card:#ffffff;
+    --text:#020617;
+    --accent:#0284c7;
+}
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 2.2em;
-        }
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+}
 
-        header p {
-            color: #94a3b8;
-            font-size: 1.1em;
-        }
+/* fundo animado cyber */
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:radial-gradient(circle at 20% 20%, #0ea5e9 0%, transparent 40%),
+               radial-gradient(circle at 80% 80%, #22d3ee 0%, transparent 40%);
+    animation:moveBg 20s linear infinite;
+    z-index:-1;
+    opacity:0.15;
+}
 
-        section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px 20px;
-        }
+@keyframes moveBg{
+    0%{transform:translate(0,0);}
+    50%{transform:translate(-25%,-25%);}
+    100%{transform:translate(0,0);}
+}
 
-        h2 {
-            border-left: 4px solid #38bdf8;
-            padding-left: 10px;
-            color: #38bdf8;
-        }
+header{
+    text-align:center;
+    padding:60px 20px;
+}
 
-        h3 {
-            color: #7dd3fc;
-        }
+header h1{
+    margin:0;
+    font-size:2.5em;
+    color:var(--accent);
+    text-shadow:0 0 10px var(--accent);
+}
 
-        h4 {
-            color: #bae6fd;
-            margin-bottom: 5px;
-        }
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
 
-        .card {
-            background: #020617;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
+h2{
+    border-left:4px solid var(--accent);
+    padding-left:10px;
+    color:var(--accent);
+}
 
-        ul {
-            padding-left: 20px;
-        }
+.grid{
+    display:grid;
+    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #020617;
-            color: #94a3b8;
-        }
+.card{
+    background:var(--card);
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(56,189,248,0.15);
+    transition:0.3s;
+}
 
-        a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
+.card:hover{
+    transform:translateY(-5px) scale(1.02);
+    box-shadow:0 0 25px rgba(56,189,248,0.35);
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+footer{
+    text-align:center;
+    padding:30px;
+    opacity:0.7;
+}
+
+/* botão WhatsApp */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
+    transition:0.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Alcindo Gomes Neto</h1>
-    <p>Estudante de Segurança Cibernética | Blue Team | SOC | Auditoria de Segurança</p>
+<h1>Alcindo Gomes Neto</h1>
+<p>Cybersecurity | SOC Analyst | Blue Team | Threat Detection</p>
 </header>
 
 <section>
-    <h2>Sobre Mim</h2>
-    <div class="card">
-        <p>
-            Sou estudante de segurança cibernética com forte capacidade de resolução de problemas,
-            organização e aprendizado rápido, sempre guiado pela responsabilidade e respeito às normas.
-            Tenho grande interesse em defesa corporativa, testes de segurança, análise forense e
-            investigação de incidentes, buscando apoiar organizações na identificação de vulnerabilidades,
-            proteção de dados confidenciais e redução de riscos.
-        </p>
-    </div>
+<h2>Sobre Mim</h2>
+<div class="card">
+Profissional em formação em Segurança Cibernética com foco em atuação em SOC, 
+análise de logs, detecção de incidentes e proteção de ambientes corporativos. 
+Experiência prática em laboratórios de SIEM, troubleshooting de infraestrutura 
+e automação com Python voltada à segurança.
+</div>
 </section>
 
 <section>
-    <h2>Projeto em Destaque – Auditoria de Segurança (NIST CSF)</h2>
-    <div class="card">
-        <p><strong>Empresa:</strong> Botium Toys (estudo de caso fictício)</p>
-        <p><strong>Framework:</strong> NIST Cybersecurity Framework</p>
-        <p><strong>Tipo:</strong> Auditoria Interna de TI</p>
+<h2>Projetos Práticos</h2>
+<div class="grid">
 
-        <h3>Escopo</h3>
-        <ul>
-            <li>Avaliação do programa de segurança da informação</li>
-            <li>Análise de ativos físicos, técnicos e administrativos</li>
-            <li>Verificação de conformidade regulatória</li>
-        </ul>
+<div class="card">
+<h3>🔎 Laboratório de SIEM</h3>
+Implantação de ambiente com Wazuh, Splunk e Security Onion para 
+detecção de eventos de autenticação, correlação de logs e análise inicial de incidentes.
+</div>
 
-        <h3>Principais Riscos Identificados</h3>
-        <ul>
-            <li>Ausência de criptografia de dados sensíveis</li>
-            <li>Falta de controle de acesso adequado</li>
-            <li>Inexistência de plano de recuperação de desastres</li>
-            <li>Backups inexistentes</li>
-            <li>Não conformidade total com PCI DSS e GDPR</li>
-        </ul>
+<div class="card">
+<h3>🐍 Automação de Segurança com Python</h3>
+Scripts para consultas SQL automatizadas, análise de logs, organização de dados 
+e otimização de rotinas operacionais de segurança.
+</div>
 
-        <h3>Recomendações</h3>
-        <ul>
-            <li>Implementação do princípio do menor privilégio</li>
-            <li>Criptografia de dados críticos</li>
-            <li>Plano de recuperação de desastres e backups</li>
-            <li>Implantação de IDS</li>
-            <li>Treinamento em segurança da informação</li>
-        </ul>
+<div class="card">
+<h3>💽 Troubleshooting SSD M.2</h3>
+Diagnóstico de falha de reconhecimento de armazenamento, identificação de causa raiz 
+em hardware e restauração completa do sistema após substituição do dispositivo.
+</div>
 
-        <p><em>Projeto desenvolvido para fins educacionais.</em></p>
-    </div>
+</div>
 </section>
 
 <section>
-    <h2>Projetos Práticos em TI / Segurança</h2>
+<h2>Competências</h2>
+<div class="grid">
 
-    <div class="card">
-        <h3>Laboratório de SIEM</h3>
-        <p>
-            Implantação de ambiente de testes com Wazuh, Splunk Free e Security Onion,
-            incluindo criação de regras de detecção, análise de eventos de autenticação
-            e validação de logs de segurança.
-        </p>
-    </div>
+<div class="card">
+<h3>🛡️ Segurança</h3>
+NIST CSF • ISO 27001 • IAM • Análise de Riscos • Políticas de Segurança
+</div>
 
-    <div class="card">
-        <h3>Scripts em Python para Automação de Segurança</h3>
-        <p>
-            Desenvolvimento de scripts voltados à automação de consultas SQL, análise de logs,
-            organização de dados e otimização de rotinas operacionais de segurança da informação.
-        </p>
-    </div>
+<div class="card">
+<h3>📡 SOC / Blue Team</h3>
+SIEM • Logs • Detecção de Incidentes • Resposta Inicial
+</div>
 
-    <div class="card">
-        <h3>Diagnóstico e Substituição de SSD M.2 — Falha de Reconhecimento</h3>
+<div class="card">
+<h3>💻 Tecnologia</h3>
+Python • SQL • Linux • Redes • Troubleshooting
+</div>
 
-        <p><strong>Tipo:</strong> Troubleshooting de Hardware / Infraestrutura</p>
-
-        <h4>Contexto</h4>
-        <p>
-            Notebook apresentava lentidão extrema e falha no reconhecimento do armazenamento
-            durante a instalação do sistema operacional, impedindo a formatação e uso adequado.
-        </p>
-
-        <h4>Problema Identificado</h4>
-        <ul>
-            <li>Disco não detectado pelo instalador</li>
-            <li>Erro de ausência de unidade de armazenamento</li>
-            <li>Desempenho severamente degradado</li>
-        </ul>
-
-        <h4>Processo de Diagnóstico</h4>
-        <ul>
-            <li>Verificação de configurações da BIOS</li>
-            <li>Ajuste de prioridade de boot</li>
-            <li>Testes de reconhecimento no instalador</li>
-            <li>Análise de partições e drivers</li>
-            <li>Testes físicos de hardware</li>
-        </ul>
-
-        <h4>Causa Raiz</h4>
-        <p>Falha física no SSD M.2, impedindo o reconhecimento correto do armazenamento.</p>
-
-        <h4>Solução Aplicada</h4>
-        <ul>
-            <li>Substituição do SSD defeituoso</li>
-            <li>Reinstalação do sistema operacional</li>
-            <li>Validação completa do funcionamento</li>
-        </ul>
-
-        <h4>Resultado</h4>
-        <ul>
-            <li>Armazenamento reconhecido corretamente</li>
-            <li>Desempenho restaurado</li>
-            <li>Equipamento plenamente funcional</li>
-        </ul>
-
-        <h4>Competências Demonstradas</h4>
-        <ul>
-            <li>Diagnóstico de hardware</li>
-            <li>Troubleshooting de sistemas</li>
-            <li>Investigação de falhas de armazenamento</li>
-            <li>Manutenção de computadores</li>
-            <li>Pensamento analítico</li>
-        </ul>
-    </div>
+</div>
 </section>
 
 <section>
-    <h2>Competências Técnicas</h2>
-    <div class="card">
-
-        <h3>Segurança da Informação</h3>
-        <ul>
-            <li>ISO 27001</li>
-            <li>NIST CSF</li>
-            <li>Análise de Riscos</li>
-            <li>Princípio do Menor Privilégio</li>
-            <li>IAM</li>
-            <li>Políticas de Segurança</li>
-            <li>Due Diligence de Terceiros</li>
-        </ul>
-
-        <h3>SOC / Blue Team</h3>
-        <ul>
-            <li>Fundamentos de SIEM</li>
-            <li>Análise inicial de logs</li>
-            <li>Detecção de incidentes</li>
-            <li>Resposta a incidentes (conceitos)</li>
-        </ul>
-
-        <h3>Infraestrutura e Redes</h3>
-        <ul>
-            <li>Windows e Linux básico</li>
-            <li>TCP/IP, DNS, DHCP e VPN</li>
-            <li>Diagnóstico de falhas</li>
-            <li>Backup e recuperação</li>
-        </ul>
-
-        <h3>Desenvolvimento e Dados</h3>
-        <ul>
-            <li>Python básico</li>
-            <li>SQL e MySQL</li>
-            <li>HTML</li>
-            <li>Modelagem de dados</li>
-        </ul>
-    </div>
-</section>
-
-<section>
-    <h2>Formação & Certificações</h2>
-    <div class="card">
-        <p><strong>Graduação:</strong> Segurança Cibernética – UniFECAF (2º semestre – 2025)</p>
-        <ul>
-            <li>Google Cybersecurity (em andamento)</li>
-            <li>Fortinet Certified Fundamentals (FCF)</li>
-        </ul>
-    </div>
-</section>
-
-<section>
-    <h2>Contato</h2>
-    <div class="card">
-        <p>📍 São Paulo – SP</p>
-        <p>📧 <a href="mailto:alcindogomes250@gmail.com">alcindogomes250@gmail.com</a></p>
-        <p>🔗 <a href="https://www.linkedin.com/in/alcindogomesneto" target="_blank">LinkedIn</a></p>
-    </div>
+<h2>Contato</h2>
+<div class="card">
+📍 São Paulo – SP<br>
+📧 alcindogomes250@gmail.com<br>
+🔗 linkedin.com/in/alcindogomesneto
+</div>
 </section>
 
 <footer>
-    <p>© 2025 – Alcindo Gomes Neto | Cybersecurity Portfolio</p>
+© 2025 – Alcindo Gomes Neto | Cybersecurity Portfolio
 </footer>
+
+<a class="whatsapp" href="https://wa.me/5511999999999" target="_blank">💬</a>
 
 </body>
 </html>
