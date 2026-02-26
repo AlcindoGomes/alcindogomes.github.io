@@ -12,6 +12,8 @@
 --text:#e5e7eb;
 --accent:#38bdf8;
 --border:rgba(56,189,248,0.25);
+--terminal:#000000;
+--terminal-text:#00ff9d;
 }
 
 @media (prefers-color-scheme: light){
@@ -21,6 +23,8 @@
 --text:#020617;
 --accent:#0284c7;
 --border:rgba(2,132,199,0.2);
+--terminal:#111;
+--terminal-text:#00aa66;
 }
 }
 
@@ -153,7 +157,20 @@ transition:0.3s;
 
 .whatsapp:hover{transform:scale(1.15);}
 
-.report-img{
+/* TERMINAL REALISTA */
+.terminal{
+background:var(--terminal);
+color:var(--terminal-text);
+font-family:monospace;
+padding:20px;
+border-radius:10px;
+margin-top:15px;
+border:1px solid var(--border);
+overflow-x:auto;
+}
+
+/* IMAGENS PROJETOS */
+.project-img{
 width:100%;
 border-radius:10px;
 margin-top:15px;
@@ -187,81 +204,61 @@ e automação com Python aplicada à segurança da informação.
 
 <div class="card">
 <h3>🔎 Laboratório de SIEM</h3>
-Implementação de ambiente com Wazuh, Splunk e Security Onion para monitoramento,
-correlação de eventos e análise inicial de incidentes de segurança.
+Ambiente com Wazuh, Splunk e Security Onion para monitoramento e correlação de eventos.
+<img class="project-img"
+src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1000&q=80">
 </div>
 
 <div class="card">
 <h3>🐍 Automação de Segurança com Python</h3>
-Scripts para consultas SQL automatizadas, análise de logs e otimização
-de processos operacionais em segurança.
+Scripts para análise de logs e consultas automatizadas.
+<img class="project-img"
+src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1000&q=80">
 </div>
 
 <div class="card">
 <h3>💽 Troubleshooting SSD M.2</h3>
-Diagnóstico completo de falha de reconhecimento de armazenamento,
-identificação da causa raiz em hardware e restauração do sistema.
+Diagnóstico e identificação de falha de hardware.
+<img class="project-img"
+src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1000&q=80">
 </div>
 
 </div>
 </section>
 
-<!-- NOVA SEÇÃO ADICIONADA -->
 <section>
 <h2>📄 Cybersecurity Incident Report – Network Traffic Analysis</h2>
 
 <div class="card">
 <h3>Resumo do Incidente</h3>
 Usuários relataram indisponibilidade do site <strong>www.yummyrecipesforme.com</strong>.
-A análise de tráfego via tcpdump indicou falha na comunicação com o servidor DNS.
+A análise via tcpdump indicou falha no serviço DNS.
 </div>
 
 <div class="card">
-<h3>Análise do Log</h3>
-<pre>
-192.51.100.15.52444 > 203.0.113.2.domain: A? yummyrecipesforme.com
-203.0.113.2 > 192.51.100.15: ICMP udp port 53 unreachable
-</pre>
+<h3>Análise Técnica (Terminal Real)</h3>
 
-<img class="report-img"
-src="https://dummyimage.com/900x400/000000/00ffcc&text=Simulated+TCPDump+Log+Output"
-alt="Simulated tcpdump print">
+<div class="terminal">
+$ tcpdump -i eth0 port 53<br><br>
+13:24:32.192571 IP 192.51.100.15.52444 > 203.0.113.2.domain: A? yummyrecipesforme.com<br>
+13:24:36.098564 IP 203.0.113.2 > 192.51.100.15: ICMP udp port 53 unreachable length 254
+</div>
 
-<p><strong>Protocolo:</strong> UDP<br>
+<p style="margin-top:15px;">
+<strong>Protocolo:</strong> UDP<br>
 <strong>Serviço Afetado:</strong> DNS<br>
 <strong>Porta:</strong> 53<br>
-<strong>Erro:</strong> ICMP Port Unreachable</p>
+<strong>Erro:</strong> ICMP Port Unreachable
+</p>
 </div>
 
 <div class="card">
 <h3>Conclusão Técnica</h3>
-O servidor DNS (203.0.113.2) não estava aceitando conexões na porta 53.
+O servidor DNS não estava aceitando conexões na porta 53.
 Sem resolução DNS, o navegador não consegue localizar o servidor web.
 Não foram identificados indícios de ataque malicioso.
 </div>
 
-</section>
-
-<section>
-<h2>Competências</h2>
-<div class="grid">
-
-<div class="card">
-<h3>🛡️ Segurança</h3>
-NIST CSF • ISO 27001 • IAM • Gestão de Riscos • Políticas de Segurança
-</div>
-
-<div class="card">
-<h3>📡 SOC / Blue Team</h3>
-SIEM • Monitoramento • Logs • Detecção de Incidentes • Resposta Inicial
-</div>
-
-<div class="card">
-<h3>💻 Tecnologia</h3>
-Python • SQL • Linux • Redes • Troubleshooting
-</div>
-
-</div>
 </section>
 
 <section>
