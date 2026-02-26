@@ -14,7 +14,6 @@
 --border:rgba(56,189,248,0.25);
 }
 
-/* modo claro automático */
 @media (prefers-color-scheme: light){
 :root{
 --bg:#f1f5f9;
@@ -25,11 +24,7 @@
 }
 }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
 font-family:Arial, Helvetica, sans-serif;
@@ -39,7 +34,6 @@ line-height:1.6;
 overflow-x:hidden;
 }
 
-/* fundo animado cyber */
 body::before{
 content:"";
 position:fixed;
@@ -59,7 +53,6 @@ opacity:0.15;
 100%{transform:translate(0,0);}
 }
 
-/* NAVBAR */
 nav{
 position:sticky;
 top:0;
@@ -71,7 +64,6 @@ border-bottom:1px solid var(--border);
 font-weight:bold;
 }
 
-/* HEADER */
 header{
 text-align:center;
 padding:70px 20px;
@@ -89,7 +81,6 @@ font-size:1.2em;
 opacity:0.9;
 }
 
-/* SECTIONS */
 section{
 max-width:1000px;
 margin:auto;
@@ -103,14 +94,12 @@ margin-bottom:20px;
 color:var(--accent);
 }
 
-/* GRID */
 .grid{
 display:grid;
 gap:25px;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 }
 
-/* CARD */
 .card{
 background:var(--card);
 padding:25px;
@@ -124,7 +113,6 @@ transform:translateY(-6px);
 box-shadow:0 0 25px rgba(56,189,248,0.35);
 }
 
-/* DESTAQUE */
 .highlight{
 font-size:1.1em;
 font-weight:bold;
@@ -132,24 +120,19 @@ color:var(--accent);
 margin-bottom:15px;
 }
 
-/* LINKS */
 a{
 color:var(--accent);
 text-decoration:none;
 }
 
-a:hover{
-text-decoration:underline;
-}
+a:hover{text-decoration:underline;}
 
-/* FOOTER */
 footer{
 text-align:center;
 padding:40px;
 opacity:0.7;
 }
 
-/* botão WhatsApp */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -168,8 +151,13 @@ box-shadow:0 0 15px rgba(0,0,0,0.4);
 transition:0.3s;
 }
 
-.whatsapp:hover{
-transform:scale(1.15);
+.whatsapp:hover{transform:scale(1.15);}
+
+.report-img{
+width:100%;
+border-radius:10px;
+margin-top:15px;
+border:1px solid var(--border);
 }
 </style>
 </head>
@@ -187,7 +175,6 @@ transform:scale(1.15);
 <h2>Sobre Mim</h2>
 <div class="card">
 <div class="highlight">Profissional focado em Segurança Cibernética e operações SOC.</div>
-
 Atuo com análise de logs, detecção de ameaças e proteção de ambientes corporativos.
 Possuo experiência prática em laboratórios de SIEM, troubleshooting de infraestrutura
 e automação com Python aplicada à segurança da informação.
@@ -219,6 +206,42 @@ identificação da causa raiz em hardware e restauração do sistema.
 </div>
 </section>
 
+<!-- NOVA SEÇÃO ADICIONADA -->
+<section>
+<h2>📄 Cybersecurity Incident Report – Network Traffic Analysis</h2>
+
+<div class="card">
+<h3>Resumo do Incidente</h3>
+Usuários relataram indisponibilidade do site <strong>www.yummyrecipesforme.com</strong>.
+A análise de tráfego via tcpdump indicou falha na comunicação com o servidor DNS.
+</div>
+
+<div class="card">
+<h3>Análise do Log</h3>
+<pre>
+192.51.100.15.52444 > 203.0.113.2.domain: A? yummyrecipesforme.com
+203.0.113.2 > 192.51.100.15: ICMP udp port 53 unreachable
+</pre>
+
+<img class="report-img"
+src="https://dummyimage.com/900x400/000000/00ffcc&text=Simulated+TCPDump+Log+Output"
+alt="Simulated tcpdump print">
+
+<p><strong>Protocolo:</strong> UDP<br>
+<strong>Serviço Afetado:</strong> DNS<br>
+<strong>Porta:</strong> 53<br>
+<strong>Erro:</strong> ICMP Port Unreachable</p>
+</div>
+
+<div class="card">
+<h3>Conclusão Técnica</h3>
+O servidor DNS (203.0.113.2) não estava aceitando conexões na porta 53.
+Sem resolução DNS, o navegador não consegue localizar o servidor web.
+Não foram identificados indícios de ataque malicioso.
+</div>
+
+</section>
+
 <section>
 <h2>Competências</h2>
 <div class="grid">
@@ -245,9 +268,7 @@ Python • SQL • Linux • Redes • Troubleshooting
 <h2>Contato</h2>
 <div class="card">
 📍 São Paulo – SP<br><br>
-
 📧 <a href="mailto:alcindogomes250@gmail.com">alcindogomes250@gmail.com</a><br><br>
-
 🔗 <a href="https://linkedin.com/in/alcindogomesneto" target="_blank">
 linkedin.com/in/alcindogomesneto
 </a>
