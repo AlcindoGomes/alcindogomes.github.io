@@ -190,9 +190,7 @@ border:1px solid var(--border);
 <h2>Sobre Mim</h2>
 <div class="card">
 <div class="highlight">Profissional focado em Segurança Cibernética e operações SOC.</div>
-Atuo com análise de logs, detecção de ameaças e proteção de ambientes corporativos.
-Possuo experiência prática em análise de tráfego de rede, identificação de ataques DoS,
-monitoramento de eventos e resposta a incidentes.
+Atuo com análise de logs, detecção de ameaças, troubleshooting de infraestrutura e resposta a incidentes.
 </div>
 </section>
 
@@ -202,19 +200,30 @@ monitoramento de eventos e resposta a incidentes.
 
 <div class="card">
 <h3>🚨 Análise de Ataque SYN Flood (DoS)</h3>
-Identificação de ataque de negação de serviço baseado em TCP SYN Flood através de análise de tráfego de rede.
+Identificação de ataque TCP SYN Flood através de análise de tráfego.
 <br><br>
-• Captura de pacotes com análise similar ao Wireshark<br>
-• Identificação de múltiplas conexões semiabertas<br>
-• Análise do Three-Way Handshake TCP<br>
-• Proposta de mitigação com SYN Cookies e Rate Limiting
+• Alto volume de pacotes SYN<br>
+• Conexões semiabertas<br>
+• Servidor sobrecarregado<br>
+• Proposta de mitigação com SYN Cookies
 <img class="project-img"
 src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80">
 </div>
 
 <div class="card">
+<h3>📄 Incident Report – Falha DNS</h3>
+Análise de tráfego com tcpdump para identificação de erro na porta 53.
+<div class="terminal">
+$ tcpdump -i eth0 port 53<br><br>
+13:24:32 IP 192.51.100.15 > 203.0.113.2.domain: A? yummyrecipesforme.com<br>
+13:24:36 IP 203.0.113.2 > 192.51.100.15: ICMP udp port 53 unreachable
+</div>
+Diagnóstico: Serviço DNS indisponível.
+</div>
+
+<div class="card">
 <h3>🔎 Laboratório de SIEM</h3>
-Ambiente com Wazuh, Splunk e Security Onion para monitoramento e correlação de eventos.
+Ambiente com Wazuh, Splunk e Security Onion.
 <img class="project-img"
 src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1000&q=80">
 </div>
@@ -233,6 +242,17 @@ Diagnóstico e identificação de falha de hardware.
 src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1000&q=80">
 </div>
 
+</div>
+</section>
+
+<section>
+<h2>Contato</h2>
+<div class="card">
+📍 São Paulo – SP<br><br>
+📧 <a href="mailto:alcindogomes250@gmail.com">alcindogomes250@gmail.com</a><br><br>
+🔗 <a href="https://linkedin.com/in/alcindogomesneto" target="_blank">
+linkedin.com/in/alcindogomesneto
+</a>
 </div>
 </section>
 
