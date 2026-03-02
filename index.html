@@ -157,7 +157,6 @@ transition:0.3s;
 
 .whatsapp:hover{transform:scale(1.15);}
 
-/* TERMINAL REALISTA */
 .terminal{
 background:var(--terminal);
 color:var(--terminal-text);
@@ -169,7 +168,6 @@ border:1px solid var(--border);
 overflow-x:auto;
 }
 
-/* IMAGENS PROJETOS */
 .project-img{
 width:100%;
 border-radius:10px;
@@ -193,14 +191,26 @@ border:1px solid var(--border);
 <div class="card">
 <div class="highlight">Profissional focado em Segurança Cibernética e operações SOC.</div>
 Atuo com análise de logs, detecção de ameaças e proteção de ambientes corporativos.
-Possuo experiência prática em laboratórios de SIEM, troubleshooting de infraestrutura
-e automação com Python aplicada à segurança da informação.
+Possuo experiência prática em análise de tráfego de rede, identificação de ataques DoS,
+monitoramento de eventos e resposta a incidentes.
 </div>
 </section>
 
 <section>
 <h2>Projetos Práticos</h2>
 <div class="grid">
+
+<div class="card">
+<h3>🚨 Análise de Ataque SYN Flood (DoS)</h3>
+Identificação de ataque de negação de serviço baseado em TCP SYN Flood através de análise de tráfego de rede.
+<br><br>
+• Captura de pacotes com análise similar ao Wireshark<br>
+• Identificação de múltiplas conexões semiabertas<br>
+• Análise do Three-Way Handshake TCP<br>
+• Proposta de mitigação com SYN Cookies e Rate Limiting
+<img class="project-img"
+src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80">
+</div>
 
 <div class="card">
 <h3>🔎 Laboratório de SIEM</h3>
@@ -223,52 +233,6 @@ Diagnóstico e identificação de falha de hardware.
 src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1000&q=80">
 </div>
 
-</div>
-</section>
-
-<section>
-<h2>📄 Cybersecurity Incident Report – Network Traffic Analysis</h2>
-
-<div class="card">
-<h3>Resumo do Incidente</h3>
-Usuários relataram indisponibilidade do site <strong>www.yummyrecipesforme.com</strong>.
-A análise via tcpdump indicou falha no serviço DNS.
-</div>
-
-<div class="card">
-<h3>Análise Técnica (Terminal Real)</h3>
-
-<div class="terminal">
-$ tcpdump -i eth0 port 53<br><br>
-13:24:32.192571 IP 192.51.100.15.52444 > 203.0.113.2.domain: A? yummyrecipesforme.com<br>
-13:24:36.098564 IP 203.0.113.2 > 192.51.100.15: ICMP udp port 53 unreachable length 254
-</div>
-
-<p style="margin-top:15px;">
-<strong>Protocolo:</strong> UDP<br>
-<strong>Serviço Afetado:</strong> DNS<br>
-<strong>Porta:</strong> 53<br>
-<strong>Erro:</strong> ICMP Port Unreachable
-</p>
-</div>
-
-<div class="card">
-<h3>Conclusão Técnica</h3>
-O servidor DNS não estava aceitando conexões na porta 53.
-Sem resolução DNS, o navegador não consegue localizar o servidor web.
-Não foram identificados indícios de ataque malicioso.
-</div>
-
-</section>
-
-<section>
-<h2>Contato</h2>
-<div class="card">
-📍 São Paulo – SP<br><br>
-📧 <a href="mailto:alcindogomes250@gmail.com">alcindogomes250@gmail.com</a><br><br>
-🔗 <a href="https://linkedin.com/in/alcindogomesneto" target="_blank">
-linkedin.com/in/alcindogomesneto
-</a>
 </div>
 </section>
 
