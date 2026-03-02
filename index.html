@@ -147,6 +147,26 @@ text-align:center;
 padding:40px;
 opacity:0.7;
 }
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.whatsapp:hover{transform:scale(1.15);}
 </style>
 </head>
 
@@ -162,28 +182,28 @@ opacity:0.7;
 <section>
 <h2>Objetivo Profissional</h2>
 <div class="card">
-Atuar como Analista SOC Júnior ou Estagiário em Segurança da Informação,
-aplicando experiência prática em suporte N1, troubleshooting de sistemas
-e análise de tráfego de rede para detecção e resposta a incidentes.
+Atuar como Analista SOC Júnior ou Estagiário em Segurança da Informação, aplicando experiência prática em suporte N1, troubleshooting e análise de tráfego de rede para detecção e resposta a incidentes.
 </div>
 </section>
 
 <section>
 <h2>Experiência Profissional</h2>
+
 <div class="card">
 <div class="highlight">Drogaria Carrefour — Suporte Operacional N1 (2024 - Atual)</div>
 • Atendimento e resolução de incidentes em sistemas internos e PDV<br>
+• Registro, priorização e acompanhamento de chamados<br>
 • Suporte técnico direto a usuários<br>
-• Registro e priorização de chamados<br>
 • Garantia de continuidade operacional em ambiente crítico
 </div>
 
 <div class="card" style="margin-top:20px;">
 <div class="highlight">McDonald's — Operação de Sistemas (2023 - 2024)</div>
 • Operação de sistemas de vendas em ambiente de alta demanda<br>
-• Identificação e correção de falhas operacionais<br>
+• Identificação e resolução de falhas operacionais<br>
 • Cumprimento de normas e controles internos
 </div>
+
 </section>
 
 <section>
@@ -198,59 +218,87 @@ e análise de tráfego de rede para detecção e resposta a incidentes.
 </section>
 
 <section>
+<h2>Projetos Técnicos</h2>
+<div class="grid">
+
+<div class="card">
+<h3>🚨 Análise de Ataque SYN Flood (DoS)</h3>
+Investigação técnica de ataque de negação de serviço com alto volume de pacotes SYN.
+<br><br>
+• Identificação de conexões TCP semiabertas<br>
+• Análise do Three-Way Handshake incompleto<br>
+• Impacto na disponibilidade do servidor web<br>
+• Proposta de mitigação com SYN Cookies e Rate Limiting
+<img class="project-img" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80">
+</div>
+
+<div class="card">
+<h3>📄 Incident Report – Falha DNS</h3>
+Análise de tráfego com tcpdump para diagnóstico de erro no serviço DNS.
+<div class="terminal">
+$ tcpdump -i eth0 port 53<br><br>
+13:24:32 IP 192.51.100.15 > 203.0.113.2.domain: A? yummyrecipesforme.com<br>
+13:24:36 IP 203.0.113.2 > 192.51.100.15: ICMP udp port 53 unreachable
+</div>
+Diagnóstico: ICMP Port Unreachable na porta 53 impedindo resolução DNS.
+</div>
+
+<div class="card">
+<h3>🔎 Laboratório de SIEM</h3>
+Implementação de ambiente de monitoramento e correlação de eventos com Wazuh, Splunk e Security Onion.
+<img class="project-img" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1000&q=80">
+</div>
+
+<div class="card">
+<h3>🐍 Automação de Segurança com Python</h3>
+Desenvolvimento de scripts para análise automatizada de logs e identificação de padrões suspeitos.
+<img class="project-img" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1000&q=80">
+</div>
+
+<div class="card">
+<h3>💽 Troubleshooting SSD M.2</h3>
+Diagnóstico técnico de falha de hardware com testes e validação de componentes.
+<img class="project-img" src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1000&q=80">
+</div>
+
+</div>
+</section>
+
+<section>
 <h2>Certificações</h2>
 
 <div class="card">
 <div class="highlight">IBSEC – Boas Práticas de Cibersegurança (Cybersecurity Awareness)</div>
 Certificação profissional emitida pelo Instituto Brasileiro de Cibersegurança.
-<br><br>
 <img class="project-img" src="PT-IC-SEC-1783.png">
 </div>
 
 <div class="card" style="margin-top:20px;">
 <div class="highlight">Fortinet Certified Fundamentals (NSE 1)</div>
-Fundamentos de ameaças cibernéticas, segurança de rede e conceitos de proteção.
+Fundamentos de ameaças cibernéticas e segurança de redes.
 </div>
 
 <div class="card" style="margin-top:20px;">
 <div class="highlight">Google Cybersecurity Certificate (Em andamento)</div>
-Formação prática em análise de incidentes, SIEM, redes e fundamentos de segurança.
+Formação prática em análise de incidentes e SIEM.
 </div>
 
 </section>
 
 <section>
-<h2>Projetos Técnicos</h2>
-<div class="grid">
-
+<h2>Contato</h2>
 <div class="card">
-<h3>🚨 Análise de Ataque SYN Flood</h3>
-Investigação de ataque DoS com alto volume de pacotes SYN.
-<br><br>
-• Identificação de conexões TCP semiabertas<br>
-• Impacto na disponibilidade do servidor<br>
-• Proposta de mitigação com SYN Cookies
-</div>
-
-<div class="card">
-<h3>📄 Incident Report – Falha DNS</h3>
-<div class="terminal">
-$ tcpdump -i eth0 port 53
-</div>
-Diagnóstico de ICMP Port Unreachable na porta 53.
-</div>
-
-<div class="card">
-<h3>🔎 Laboratório SIEM</h3>
-Implementação e correlação de eventos com Wazuh e Splunk.
-</div>
-
+📍 São Paulo – SP<br><br>
+📧 alcindogomes250@gmail.com<br><br>
+🔗 linkedin.com/in/alcindogomesneto
 </div>
 </section>
 
 <footer>
 © 2025 — Alcindo Gomes Neto | Cybersecurity Portfolio
 </footer>
+
+<a class="whatsapp" href="https://wa.me/5511976311017" target="_blank">💬</a>
 
 </body>
 </html>
