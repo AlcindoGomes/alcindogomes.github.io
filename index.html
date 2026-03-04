@@ -212,6 +212,69 @@ Atuar como Analista SOC Júnior ou Estagiário em Segurança da Informação, ap
 <div class="grid">
 
 <div class="card">
+<h3>🌐 Incident Report – ICMP Flood (DoS) | NIST CSF Analysis</h3>
+
+Análise completa de ataque de negação de serviço (DoS) sofrido por empresa de mídia digital, utilizando a metodologia do NIST Cybersecurity Framework (CSF).
+
+<br><br>
+
+<strong>Resumo do Incidente:</strong><br>
+• Ataque ICMP Flood (Ping Flood)<br>
+• Firewall mal configurado permitiu alto volume de tráfego ICMP<br>
+• Rede interna indisponível por 2 horas<br>
+• Interrupção de serviços críticos corporativos<br><br>
+
+<strong>Identificar (Identify):</strong><br>
+• Vulnerabilidade em regra de firewall<br>
+• Ausência de rate limiting<br>
+• Falta de monitoramento ativo<br>
+• Impacto direto na disponibilidade (CIA Triad)<br><br>
+
+<strong>Proteger (Protect):</strong><br>
+• Implementação de Rate Limiting ICMP<br>
+• ACL restritiva<br>
+• Verificação de IP Spoofing<br>
+• Segmentação de rede (VLAN)<br>
+• Política formal de hardening<br><br>
+
+<strong>Detectar (Detect):</strong><br>
+• Implementação de IDS/IPS<br>
+• Monitoramento com SIEM<br>
+• Alertas para tráfego ICMP anormal<br>
+• Análise contínua de logs de firewall<br><br>
+
+<strong>Responder (Respond):</strong><br>
+• Bloqueio imediato do IP malicioso<br>
+• Isolamento de rede afetada<br>
+• Coleta de evidências (logs e pacotes)<br>
+• Atualização de firmware de firewall<br><br>
+
+<strong>Recuperar (Recover):</strong><br>
+• Restauração gradual de serviços<br>
+• Teste de resiliência pós-incidente<br>
+• Simulação de ataque controlado<br>
+• Revisão do plano de resposta a incidentes<br><br>
+
+<strong>Análise Técnica de Tráfego:</strong>
+
+<div class="terminal">
+$ tcpdump -i eth0 icmp
+14:02:11 IP 198.51.100.23 > 192.168.0.10: ICMP echo request
+14:02:11 IP 198.51.100.23 > 192.168.0.10: ICMP echo request
+14:02:11 IP 198.51.100.23 > 192.168.0.10: ICMP echo request
+14:02:12 IP 198.51.100.23 > 192.168.0.10: ICMP echo request
+(Alta taxa de requisições por segundo detectada)
+</div>
+
+<br>
+
+<strong>Resultado:</strong><br>
+Redução significativa da superfície de ataque, fortalecimento da postura de segurança e aumento da maturidade operacional baseada no NIST CSF.
+
+<img class="project-img" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80">
+</div>
+  
+<div class="card">
 <h3>🛡️ Avaliação de Risco e Hardening de Rede</h3>
 Análise de violação de dados em organização de mídia social e proposta de fortalecimento da segurança.
 <br><br>
@@ -339,4 +402,5 @@ Formação prática em SOC e SIEM.
 
 </body>
 </html>
+
 
